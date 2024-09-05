@@ -19,7 +19,8 @@ The expected response should have the following structure :
   "Market Overview": {
     "Price":"$1.554784",
     "Market Cap":"$1,552,989,041.04",
-    "Current Supply":"998,845,525.19","Holders":"179,573",
+    "Current Supply":"998,845,525.19",
+    "Holders":"179,573",
     "Price 24h Percent Change":"-5.19%"
   }
 }
