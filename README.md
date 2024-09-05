@@ -12,7 +12,7 @@ node index.js
 ```
 
 ## Run the API
-Here is the route to get the data : `GET`: `localhost:3000/api`
+Here is the route to get the data : `GET`: `http://localhost:3000/api`
 
 The expected response should have the following structure :
 ```json
