@@ -8,6 +8,7 @@ git clone https://github.com/eric-fahendrena/solscan-market-overview.git
 cd solscan-market-overview
 # install deps
 npm install
+node index.js
 ```
 
 ## Run the API
