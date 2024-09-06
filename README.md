@@ -14,7 +14,7 @@ node index.js
 ## How to Get Datas
 
 ### Market Overview 
-**URL** : `GET` `http://localhost:3000/api`
+**URL** : `GET` `http://localhost:3000/api/market-overview`
 
 **Expected Response**
 ```json
@@ -43,3 +43,4 @@ node index.js
 ```
 
 *The script should load every page until it gets the last qualified holder. So, loading could be long according to the number of the qualified holders.*
+
