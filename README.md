@@ -11,10 +11,12 @@ npm install
 node index.js
 ```
 
-## Run the API
-Here is the route to get the data : `GET`: `http://localhost:3000/api`
+## How to Get Datas
 
-The expected response should have the following structure :
+### Market Overview 
+**URL** : `GET` `http://localhost:3000/api`
+
+**Expected Response**
 ```json
 {
   "Market Overview": {
@@ -26,3 +28,18 @@ The expected response should have the following structure :
   }
 }
 ```
+
+### Holders Last Qualified Percentage
+**URL**: `GET` `http://localhost:3000/api/holders/last-qualified`
+
+**Expected Response** :
+```json
+{
+  "ID":"255",
+  "Account":"9UtFmsqUVZQ3usiaqDJLeMSzjLsMbLjqpeZdR2wvHoSx",
+  "Token Account":"HtgF1SQMd8tQPkpb4QYZYZfHjzWW2zx9YNMTD29g3wg1",
+  "Percentage":"0.10%"
+}
+```
+
+*The script should load every page until it gets the last qualified holder. So, loading could be long according to the number of the qualified holders.*
