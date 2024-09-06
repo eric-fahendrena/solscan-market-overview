@@ -94,6 +94,7 @@ app.use(cors());
 	app.get('/api/market-overview', (req, res) => {
 		res.json(parsedJson);
 	});
+	
 	app.get('/api/holders/last-qualified', (req, res) => {
 		res.json(qPercJson);
 	});
