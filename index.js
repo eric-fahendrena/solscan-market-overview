@@ -23,9 +23,9 @@ app.use(cors());
 	console.log('Obtaining Market Overview data...');
 
 	await page.goto(baseURL, { timeout: 120000, waitUntil: 'networkidle2' });
-	await page.waitForSelector('#__next', { timeout: 120000 });
+	await page.waitForSelector('div#__next', { timeout: 120000 });
 	
-	const element = await page.$('#__next div.flex.flex-col.gap-0.items-stretch.justify-start.h-full.min-h-screen div.rounded-2xl.shadow-m.bg-neutral0.p-4.lg.h-full');
+	const element = await page.$('div#__next div.flex.flex-col.gap-0.items-stretch.justify-start.h-full.min-h-screen div.rounded-2xl.shadow-m.bg-neutral0.p-4.lg.h-full');
 	
 	const text = await page.evaluate(el => el.innerText, element);
 	
@@ -58,9 +58,9 @@ app.use(cors());
 	console.log('Looking for qualified percentage ...');
 	for (let i = 0; i < totalHoldersPagesNb; i++) {
 		await holdersPage.goto(`${baseURL}?page=${i+1}#holders`, { timeout: 120000, waitUntil: 'networkidle2' });
-		await holdersPage.waitForSelector('#__next', { timeout: 120000 });
+		await holdersPage.waitForSelector('div#__next', { timeout: 120000 });
 
-		const hTexts = await holdersPage.$$eval('#__next #account-tabs table tbody tr td', els => els.map(el => el.innerText));
+		const hTexts = await holdersPage.$$eval('div#__next #account-tabs table tbody tr td', els => els.map(el => el.innerText));
 
 		for (let j = 0; j < 10; j++) {
 			const holderArr = hTexts.slice((j * 6), (j * 6) + 6);
